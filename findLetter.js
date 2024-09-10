@@ -2,7 +2,7 @@
 
 function findExtraLetter(sample) {
 
-    let letters = [];
+    const letters = [];
 
     for (var i = 0; i < sample.length; i++) {
         letters.push(sample.charAt(i));
