@@ -1,19 +1,19 @@
-const data = 'abcbeea';
 
-let letters = [];
-
-for (var i = 0; i < data.length; i++) {
-    letters.push(data.charAt(i));
-}
 
 function findMiddeleLetter(sample) {
-    let hasExtraInSample = 0;
+  
+let letters = [];
+
+for (var i = 0; i < sample.length; i++) {
+    letters.push(sample.charAt(i));
+}
+    let hasExtra = 0;
     let hasExtraInRemaining = 0;
-    for (let i = 0; i < (letters.length) / 2 && hasExtraInSample === 0; i++) {
+    for (let i = 0; i < (letters.length) / 2 && hasExtra === 0; i++) {
 
         if ((letters[i] !== letters[letters.length - (i + 1)] && (letters[i] === letters[letters.length - (i + 2)] || letters[i + 1] === letters[letters.length - (i + 1)]))) {
 
-            hasExtraInSample = hasExtraInSample + 1
+            hasExtra = hasExtra + 1
             let start = 0
             let end = 0
 
@@ -38,6 +38,6 @@ function findMiddeleLetter(sample) {
         }
     }
 
-    return hasExtraInRemaining === 0 && (hasExtraInSample === 1 || hasExtraInSample === 2);
+    return hasExtraInRemaining === 0 && (hasExtra === 1 || hasExtra === 2);
 }
-console.log("hasExtraInSample", findMiddeleLetter("letters"))
+console.log("hasExtra", findMiddeleLetter("abcbea"))
