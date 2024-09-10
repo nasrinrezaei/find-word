@@ -1,6 +1,6 @@
 
 
-function findMiddeleLetter(sample) {
+function findExtraLetter(sample) {
 
     let letters = [];
 
@@ -40,4 +40,4 @@ function findMiddeleLetter(sample) {
 
     return hasExtraInRemaining === 0 && (hasExtra === 1 || hasExtra === 2);
 }
-console.log("hasExtra", findMiddeleLetter("abcbea"))
+findExtraLetter("abcbea")
