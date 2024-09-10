@@ -1,12 +1,12 @@
 
 
 function findMiddeleLetter(sample) {
-  
-let letters = [];
 
-for (var i = 0; i < sample.length; i++) {
-    letters.push(sample.charAt(i));
-}
+    let letters = [];
+
+    for (var i = 0; i < sample.length; i++) {
+        letters.push(sample.charAt(i));
+    }
     let hasExtra = 0;
     let hasExtraInRemaining = 0;
     for (let i = 0; i < (letters.length) / 2 && hasExtra === 0; i++) {
